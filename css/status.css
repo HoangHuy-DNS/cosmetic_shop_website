@@ -1,0 +1,30 @@
+body {
+  font-family: Arial;
+  background: #f4f4f4;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  margin-top: 60px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.status {
+  color: orange;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}

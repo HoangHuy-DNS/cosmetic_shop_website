@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mỹ Phẩm Online</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+  </head>
+  <body>
+    <header class="menu">
+      <div class="mn">
+        <h3>Chất lượng thật, giá trị thật</h3>
+        <h1 class="mp">Mỹ Phẩm Online</h1>
+        <h3>Cuối tháng sale to cả Offline & Online</h3>
+      </div>
+      <ul>
+        <div class="menu2">
+          <div class="menu-title">Thương Hiệu</div>
+
+          <div class="dropdown">
+            <ul>
+              <li><a href="cerave.html">CeraVe</a></li>
+              <li><a href="klairs.html">Klairs</a></li>
+              <li><a href="anessa.html">Anessa</a></li>
+              <li><a href="cocoon.html">Cocoon</a></li>
+              <li><a href="olay.html">Olay</a></li>
+              <li><a href="maybelline.html">Maybelline</a></li>
+              <li><a href="loreal.html">L'Oreal</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="">⭐ Bán chạy</a>
+        <a href="../html/hangmoive.html">📦 Hàng mới về</a>
+        <a href="">🔥 Hot deals</a>
+      </ul>
+
+      <div class="top-info">
+        <div class="info-item">
+          <div class="icon">🏪</div>
+          <span class="baohanh"><a href="">Hệ thống cửa hàng</a></span>
+        </div>
+
+        <div class="info-item">
+          <div class="icon">✔</div>
+          <span class="baohanh"><a href="../html/baohanh.html">Bảo hành</a></span>
+
+        </div>
+
+        <div class="info-item">
+          <div class="icon">📞</div>
+          <span class="baohanh"><a href="../html/htkh.html">Hỗ trợ khách hàng</a></span>
+        </div>
+
+        <div class="info-item">
+          <a href="cart.html" class="cart-btn">🛒 Giỏ hàng</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="search-bar">
+      <div class="menu2">
+        <div class="menu-title">☰ DANH MỤC</div>
+
+        <div class="dropdown">
+          <ul>
+            <li class="title">Sức Khỏe - Làm Đẹp</li>
+            <li>Chăm Sóc Da Mặt <span>›</span></li>
+            <li>Trang Điểm <span>›</span></li>
+            <li>Chăm Sóc Cơ Thể <span>›</span></li>
+            <li>Chăm Sóc Cá Nhân <span>›</span></li>
+            <li>Nước Hoa <span>›</span></li>
+          </ul>
+        </div>
+      </div>
+      <input type="text" id="searchInput" placeholder="Nhập tên sản phẩm..." />
+      <button onclick="searchProduct()">Tìm</button>
+    </div>
+
+    <div class="products">
+      <!-- SẢN PHẨM 1 -->
+
+      <div class="product">
+        <img src="../img/cerave.jpg"
+>
+        <h3 class="product-name">Sữa Rửa Mặt CeraVe</h3>
+
+        <p class="price">272000đ</p>
+
+        <button
+          onclick="
+            addToCart('Sữa Rửa Mặt CeraVe', 282000, '../img/cerave.jpg')
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="kemruamatt.html" class="btn">Xem chi tiết</a>
+      </div>
+
+      <!-- SẢN PHẨM 2 -->
+
+      <div class="product">
+        <img src="../img/suachongnang.png" alt="">
+        <h3 class="product-name">Sữa chống nắng</h3>
+
+        <p class="price">436000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Sữa chống nắng Anessa',
+              436000,
+              '../img/suachongnang.png',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="suachongnang.html" class="btn">Xem chi tiết</a>
+      </div>
+
+      <!-- SẢN PHẨM 3 -->
+
+      <div class="product">
+        <img
+          src="../img/gelruamat.jpg"
+        />
+
+        <h3 class="product-name">Gel Rửa Mặt</h3>
+
+        <p class="price">399000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Gel Rửa Mặt La Roche-Posay',
+              399000,
+              '../img/gelruamat.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="gelruamat.html" class="btn">Xem chi tiết</a>
+      </div>
+      <!-- SẢN PHẨM 4 -->
+      <div class="product">
+        <img
+          src="../img/kemduong.jpg"
+        />
+
+        <h3 class="product-name">Kem Dưỡng</h3>
+
+        <p class="price">163000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Kem Dưỡng Olay Luminous Ban Đêm',
+              163000,
+              '../img/kemduong.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="kemduong.html" class="btn">Xem chi tiết</a>
+      </div>
+     
+      <!-- SẢN PHẨM 5 -->
+      <div class="product">
+        <img
+          src="../img/matnangumoi.jpg"
+        />
+
+        <h3 class="product-name">Mặt nạ nhủ môi</h3>
+
+        <p class="price">55000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Mặt Nạ Ngủ Môi Laneige Berry',
+              55000,
+              '../img/matnangumoi.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="matnangumoi.html" class="btn">Xem chi tiết</a>
+      </div>
+
+       <!-- SẢN PHẨM 6 -->
+      <div class="product">
+        <img
+          src="../img/nươchoahong.jpg"
+        />
+
+        <h3 class="product-name">Nước Hoa Hồng Klairs</h3>
+
+        <p class="price">205000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Nước Hoa Hồng Klairs Supple Preparation Unscented Toner',
+              205000,
+              '../img/nươchoahong.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="nuochoahong.html" class="btn">Xem chi tiết</a>
+      </div>
+
+       <!-- SẢN PHẨM 7 -->
+      <div class="product">
+        <img
+          src="../img/nuoctaytrang.jpg"
+        />
+        <h3 class="product-name">Nước Tẩy Trang <br></h3>
+        <p class="price">335000đ</p>
+        <button
+          onclick="
+            addToCart(
+              'Nước Tẩy Trang Bioderma Sensibio H2O',
+              335000,
+              '../img/nuoctaytrang.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="nuoctaytrang.html" class="btn">Xem chi tiết</a>
+      </div>
+
+       <!-- SẢN PHẨM 8 -->
+      <div class="product">
+        <img
+          src="../img/kemchongnang.jpg"
+        />
+        <h3 class="product-name">Kem chống nắng</h3>
+        <p class="price">231000đ</p>
+        <button
+          onclick="
+            addToCart(
+              'Kem Chống Nắng Skin1004 Centella',
+              231000,
+              '../img/kemchongnang.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="kemchongnang.html" class="btn">Xem chi tiết</a>
+      </div>
+
+       <!-- SẢN PHẨM 9 -->
+      <div class="product">
+        <img
+          src="../img/ca-phe-dak-lak-lam-sach-da-chet-cho-mat-cocoon-150ml-1.jpg"
+        />
+        <h3 class="product-name">Tẩy Da Chết </h3>
+
+        <p class="price">120000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Tẩy Da Chết Cocoon Cà Phê Đắk Lắk',
+              120000,
+              '../img/ca-phe-dak-lak-lam-sach-da-chet-cho-mat-cocoon-150ml-1.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="taytebaochet.html" class="btn">Xem chi tiết</a>
+      </div>
+
+       <!-- SẢN PHẨM 10 -->
+      <div class="product">
+        <img
+          src="../img/mat-na-caryophy-lam-giam-mun-tham-duong-am-da-2.jpg"
+        />
+
+        <h3 class="product-name">Mặt Nạ Caryophy</h3>
+
+        <p class="price">22000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Mặt Nạ Caryophy Làm Giảm Mụn, Thâm & Dưỡng Ẩm Da',
+              22000,
+              '../img/mat-na-caryophy-lam-giam-mun-tham-duong-am-da-2.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="matna.html" class="btn">Xem chi tiết</a>
+      </div>
+
+       <!-- SẢN PHẨM 11 -->
+      <div class="product">
+        <img
+          src="../img/kemnen.jpg"
+        />
+
+        <h3 class="product-name">Kem nền</h3>
+
+        <p class="price">219000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Kem Nền Maybelline Superstay Lumi-Matte',
+              219000,
+              '../img/kemnen.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="kemnen.html" class="btn">Xem chi tiết</a>
+      </div>
+
+       <!-- SẢN PHẨM 12 -->
+      <div class="product">
+        <img
+          src="../img/daugoixa.jpg"
+        />
+
+        <h3 class="product-name">Bộ Gội Xả</h3>
+
+        <p class="price">327000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Bộ Gội Xả L Oreal Giảm Gãy Rụng Tóc Giúp Tóc Chắc Khỏe',
+              327000,
+              '../img/daugoixa.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="daugoixa.html" class="btn">Xem chi tiết</a>
+      </div>
+
+       <!-- SẢN PHẨM 13 -->
+      <div class="product">
+        <img
+          src="../img/suaduongam.jpg"
+        />
+        <h3 class="product-name"><br>Sữa Dưỡng Ẩm </h3>
+        <p class="price">358000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Sữa Dưỡng Ẩm Embryolisse Lait-Crème Concentré',
+              358000,
+              '../img/suaduongam.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="suaduongam.html" class="btn">Xem chi tiết</a>
+      </div>
+       <!-- SẢN PHẨM 14 -->
+      <div class="product">
+        <img
+          src="../img/serum.jpg"
+        />
+
+        <h3 class="product-name">Serum Skin1004</h3>
+
+        <p class="price">215000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Serum Skin1004 Rau Má Làm Dịu & Hỗ Trợ Phục Hồi Da',
+              215000,
+              '../img/serum.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="serum.html" class="btn">Xem chi tiết</a>
+      </div>
+
+       <!-- SẢN PHẨM 15 -->
+      <div class="product">
+        <img
+          src="../img/paula.jpg"
+        />
+        <h3 class="product-name"><br>Kem Dưỡng Thể</h3>
+        <p class="price">752000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Combo Paula Choice ',
+              752000,
+              '../img/paula.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="combpaula.html" class="btn">Xem chi tiết</a>
+      </div>
+
+       <!-- SẢN PHẨM 16 -->
+      <div class="product">
+        <img
+          src="../img/moctoc.jpg"
+        />
+
+        <h3 class="product-name">Tinh chất mọc tóc </h3>
+        <p class="price">911000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Tinh chất mọc tóc Loreal',
+              911000,
+              '../img/moctoc.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="moctoc.html" class="btn">Xem chi tiết</a>
+      </div>
+
+       <!-- SẢN PHẨM 17 -->
+      <div class="product">
+        <img
+          src="../img/gelchongnang.jpg"
+        />
+        <h3 class="product-name"><br>Gel chống nắng Anessa</h3>
+        <p class="price">448000đ</p>
+        <button
+          onclick="
+            addToCart(
+              'Gel chống nắng Anessa',
+              448000,
+              '../img/gelchongnang.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="gelchongnang.html" class="btn">Xem chi tiết</a>
+      </div>
+
+       <!-- SẢN PHẨM 18 -->
+      <div class="product">
+        <img
+          src="../img/kemduongK.jpg"
+        />
+
+        <h3 class="product-name">Kem dưỡng Klairs</h3>
+
+        <p class="price">294000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Kem dưỡng Klairs Midnight Blue Cream',
+              294000,
+              '../img/kemduongK.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="kemduongKlairs.html" class="btn">Xem chi tiết</a>
+      </div>
+
+       <!-- SẢN PHẨM 19 -->
+      <div class="product">
+        <img
+          src="../img/mascara.jpg"
+        />
+
+        <h3 class="product-name">Mascara </h3>
+
+        <p class="price">55000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Mascara Maybelline Sky High',
+              158000,
+              '../img/mascara.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="Mascara.html" class="btn">Xem chi tiết</a>
+      </div>
+
+       <!-- SẢN PHẨM 20 -->
+      <div class="product">
+        <img
+          src="../img/dautaytrang.png"
+        />
+
+        <h3 class="product-name">Dầu tẩy trang</h3>
+
+        <p class="price">141000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Dầu tẩy trang Cocoon Rose Cleansing Oil',
+              141000,
+              '../img/dautaytrang.png',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="dautaytrang.html" class="btn">Xem chi tiết</a>
+      </div>
+
+       <!-- SẢN PHẨM 21 -->
+      <div class="product">
+        <img
+          src="../img/boduongda.jpg"
+        />
+        <h3 class="product-name"><br>Bộ dưỡng da</h3>
+
+        <p class="price">145000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Bộ dưỡng da Cerave 4 món',
+              145000,
+              '../img/boduongda.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+
+        <a href="boduongda.html" class="btn">Xem chi tiết</a>
+      </div>
+
+       <!-- SẢN PHẨM 22 -->
+      <div class="product">
+        <img
+          src="../img/suatam.jpg"
+        />
+
+        <h3 class="product-name">Sữa tắm Olay</h3>
+
+        <p class="price">309000đ</p>
+
+        <button
+          onclick="
+            addToCart(
+              'Sữa tắm Olay Strawberry Mint',
+              309000,
+              '../img/suatam.jpg',
+            )
+          "
+        >
+          🛒 Thêm vào giỏ
+        </button>
+        <a href="suatam.html" class="btn">Xem chi tiết</a>
+      </div>
+    </div>
+    <script src="../js/cart.js"></script>
+    <script>
+function toggleWarranty(){
+let box = document.getElementById("warranty-box");
+
+if(box.style.display === "block"){
+box.style.display = "none";
+}else{
+box.style.display = "block";
+}
+}
+</script>
+      </div>
+    </div>
+
+    <script src="../js/cart.js"></script>
+
+  </body>
+</html>

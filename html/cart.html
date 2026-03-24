@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="../css/cart.css" />
+  </head>
+
+  <body>
+    <h1>🛒 Giỏ hàng của bạn</h1>
+    <div class="top-nav">
+      <a href="index.html" class="home">🏠 Home</a>
+    </div>
+    <div class="order-btn">
+      <a href="orders.html">📦 Theo dõi đơn</a>
+    </div>
+    <table>
+      <tr>
+        <th>Ảnh</th>
+        <th>Tên</th>
+        <th>Giá</th>
+        <th>Số lượng</th>
+        <th>Tạm tính</th>
+        <th>Xóa</th>
+      </tr>
+
+      <tbody id="cart-items"></tbody>
+    </table>
+
+    <h2 id="total"></h2>
+
+    <div class="checkout">
+      <a href="checkout.html">
+        <button>Thanh toán</button>
+      </a>
+    </div>
+
+    <script src="../js/cart.js"></script>
+
+    <script>
+      displayCart();
+    </script>
+  </body>
+</html>
