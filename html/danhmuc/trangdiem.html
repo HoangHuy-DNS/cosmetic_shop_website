@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Trang Điểm</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header class="menu">
+      <h1 class="mp">Sản Phẩm Trang Điểm</h1>
+
+      <ul>
+        <a href="../trangchu/index.html" class="home">🏠 Home</a>
+        <div class="menu2">
+          <div class="menu-title">Thương Hiệu</div>
+
+          <div class="dropdown">
+            <ul>
+              <li><a href="cerave.html">CeraVe</a></li>
+              <li><a href="klairs.html">Klairs</a></li>
+              <li><a href="anessa.html">Anessa</a></li>
+              <li><a href="cocoon.html">Cocoon</a></li>
+              <li><a href="olay.html">Olay</a></li>
+              <li><a href="maybelline.html">Maybelline</a></li>
+              <li><a href="loreal.html">L'Oreal</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="banchay.html">⭐ Bán chạy</a>
+        <a href="hangmoi.html">📦 Hàng mới về</a>
+        <a href="hotdeals.html">🔥 Hot deals</a>
+      </ul>
+
+      <div class="top-info">
+        <div class="info-item">
+          <div class="icon">🏪</div>
+          <span>Hệ thống cửa hàng</span>
+        </div>
+
+        <div class="info-item">
+          <div class="icon">✔</div>
+          <span>Bảo hành</span>
+        </div>
+
+        <div class="info-item">
+          <div class="icon">📞</div>
+          <span>Hỗ trợ khách hàng</span>
+        </div>
+
+        <div class="info-item">
+          <a href="cart.html" class="cart-btn">🛒 Giỏ hàng</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="search-bar">
+      <div class="menu2">
+        <div class="menu-title">☰ DANH MỤC</div>
+
+        <div class="dropdown">
+          <ul>
+            <li class="title">Sức Khỏe - Làm Đẹp</li>
+            <li>
+              <a href="chamsocdamat.html">Chăm Sóc Da Mặt <span>›</span></a>
+            </li>
+            <li>
+              <a href="trangdiem.html">Trang Điểm <span>›</span></a>
+            </li>
+            <li>
+              <a href="chamsoccothe.html">Chăm Sóc Cơ Thể <span>›</span></a>
+            </li>
+            <li>
+              <a href="chamsoccacnhan.html">Chăm Sóc Cá Nhân <span>›</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <input type="text" id="searchInput" placeholder="Nhập tên sản phẩm..." />
+      <button onclick="searchProduct()">Tìm</button>
+    </div>
+
+    <div class="product-section">
+      <h2 class="product-title">SẢN PHẨM</h2>
+      <div class="products">
+        <!-- SẢN PHẨM 5 -->
+        <div class="product">
+          <img src="../img/matnangumoi.jpg" />
+
+          <h3 class="product-name">Mặt nạ nhủ môi</h3>
+
+          <p class="price">55000đ</p>
+
+          <button
+            onclick="
+              addToCart(
+                'Mặt Nạ Ngủ Môi Laneige Berry',
+                55000,
+                '../img/matnangumoi.jpg',
+              )
+            "
+          >
+            🛒 Thêm vào giỏ
+          </button>
+
+          <a href="matnangumoi.html" class="btn">Xem chi tiết</a>
+        </div>
+
+        <!-- SẢN PHẨM 11 -->
+        <div class="product">
+          <img src="../img/kemnen.jpg" />
+
+          <h3 class="product-name">Kem nền</h3>
+
+          <p class="price">219000đ</p>
+
+          <button
+            onclick="
+              addToCart(
+                'Kem Nền Maybelline Superstay Lumi-Matte',
+                219000,
+                '../img/kemnen.jpg',
+              )
+            "
+          >
+            🛒 Thêm vào giỏ
+          </button>
+
+          <a href="kemnen.html" class="btn">Xem chi tiết</a>
+        </div>
+
+        <!-- SẢN PHẨM 19 -->
+        <div class="product">
+          <img src="../img/mascara.jpg" />
+
+          <h3 class="product-name">Mascara</h3>
+
+          <p class="price">55000đ</p>
+
+          <button
+            onclick="
+              addToCart(
+                'Mascara Maybelline Sky High',
+                158000,
+                '../img/mascara.jpg',
+              )
+            "
+          >
+            🛒 Thêm vào giỏ
+          </button>
+
+          <a href="Mascara.html" class="btn">Xem chi tiết</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/cart.js"></script>
+  </body>
+</html>
