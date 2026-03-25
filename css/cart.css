@@ -1,21 +1,43 @@
 body {
   font-family: Arial;
-  margin: 0;
-  background: #fff0f5;
+  line-height:1.6;
+}
+*{
+  margin: auto;
+  box-sizing: border-box;
+  padding:10px;
 }
 
 header {
-  background: #ff69b4;
+  height: 170px;
   color: white;
-  padding: 20px;
+  border: solid 1px rgb(149, 149, 149);
+  background: linear-gradient(0deg, rgb(240, 148, 163),pink);
+}
+.container{
+  background: #fdd9eb;
+}
+header h1{
   text-align: center;
+  text-shadow: 10px 0px 3px rgb(120, 118, 118);
+}
+.menu{
+  justify-content: space-around;
+}
+.tdd{
+  margin-top: 10px;
+}
+.tdd a{
+  border: solid 1px black;
+  padding: 7px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
 }
 
-nav a {
-  margin: 10px;
+.tdd a:hover{
   color: white;
-  text-decoration: none;
-  font-weight: bold;
+  background-color: rgb(245, 194, 133);
 }
 
 .products {
@@ -127,4 +149,37 @@ td {
 .back-cart a:hover {
   background: #e60023;
   transform: scale(1.05);
+}
+footer{
+  padding: 10px 0px;
+}
+.f{
+  display:flex;
+  justify-content: space-between;
+  border:1px solid #ddd;
+  border-radius:6px;
+  background-color: #77a18d;
+}
+.f input{
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+.dk{
+background:orange;
+border-radius: 10px;
+}
+
+span{
+color:orange;
+}
+.cart-btn, .home-btn{
+    border: solid 1px rgb(78, 77, 77);
+    padding: 3px;
+    border-radius: 7px;
+}
+.cart-btn:hover, .home-btn:hover{
+    background: orange;
+    color: white;
 }
