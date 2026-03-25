@@ -1,0 +1,148 @@
+<!doctype html>
+
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>L'Oreal</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <header class="menu">
+        <h1 class="mp">L'Oreal</h1>
+        <ul>
+            <div class="menu2">
+                <div class="menu-title">Thương Hiệu</div>
+
+                <div class="dropdown">
+                    <div class="dropdown">
+                        <li><a href="../thuonghieu/cerave.html">CeraVe</a></li>
+                        <li><a href="../thuonghieu/klairs.html">Klairs</a></li>
+                        <li><a href="../thuonghieu/anessa.html">Anessa</a></li>
+                        <li><a href="../thuonghieu/cocoon.html">Cocoon</a></li>
+                        <li><a href="../thuonghieu/olay.html">Olay</a></li>
+                        <li><a href="../thuonghieu/maybelline.html">Maybelline</a></li>
+                        <li><a href="../thuonghieu/loreal.html">L'Oreal</a></li>
+                    </div>
+                </div>
+            </div>
+            <a href="../trangchu/index.html" class="home">🏠 Home</a>
+            <a href="">⭐ Bán chạy</a>
+            <a href="../trangchu/hangmoive.html">📦 Hàng mới về</a>
+        </ul>
+
+        <div class="top-info">
+            <div class="info-item">
+                <div class="icon">🏪</div>
+                <span class="baohanh"><a href="../trangchu/htch.html">Hệ thống cửa hàng</a></span>
+            </div>
+
+            <div class="info-item">
+                <div class="icon">✔</div>
+                <span class="baohanh"><a href="../trangchu/baohanh.html">Bảo hành</a></span>
+            </div>
+
+            <div class="info-item">
+                <div class="icon">📞</div>
+                <span class="baohanh"><a href="../trangchu/htkh.html">Hỗ trợ khách hàng</a></span>
+            </div>
+    </header>
+
+    <div class="search-bar">
+        <div class="menu2">
+            <div class="menu-title">☰ DANH MỤC</div>
+
+            <div class="dropdown">
+                <ul>
+                    <li class="title">Sức Khỏe - Làm Đẹp</li>
+                    <li><a href="chamsocdamat.html">Chăm Sóc Da Mặt <span>›</span></a></li>
+                    <li><a href="trangdiem.html">Trang Điểm <span>›</span></a></li>
+                    <li><a href="chamsoccothe.html">Chăm Sóc Cơ Thể <span>›</span></a></li>
+                    <li><a href="chamsoccacnhan.html">Chăm Sóc Cá Nhân <span>›</span></a></li>
+                    <li><a href="nuochoa.html">Nước Hoa <span>›</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <input type="text" id="searchInput" placeholder="Nhập tên sản phẩm..." />
+        <button onclick="searchProduct()">Tìm</button>
+    </div>
+
+    <!-- GIỚI THIỆU THƯƠNG HIỆU -->
+
+    <div class="brand-description">
+        <img src="../img/../img/THlorael.png" alt="Loreal" class="brand-img">
+
+        <div class="brand-text">
+            <h2>L'Oreal</h2>
+            <p>
+                L'Oreal là tập đoàn mỹ phẩm lớn nhất thế giới đến từ Pháp. Thương hiệu nổi tiếng với các sản phẩm chăm sóc da, trang điểm và chăm sóc tóc. Các sản phẩm của L'Oreal được yêu thích nhờ công nghệ làm đẹp tiên tiến và chất lượng cao.
+            </p>
+        </div>
+    </div>
+
+    <!-- SẢN PHẨM -->
+
+    <div class="product-section">
+        <h2 class="product-title">SẢN PHẨM</h2>
+
+        <div class="products">
+
+            <!-- SẢN PHẨM 1 -->
+
+
+
+            <!-- SẢN PHẨM 2 -->
+
+            <div class="product">
+                <img src="../img/moctoc.jpg" />
+
+                <h3 class="product-name">Tinh chất mọc tóc Loreal</h3>
+
+                <p class="price">911000đ</p>
+
+                <button onclick="
+            addToCart(
+              'Tinh chất mọc tóc Loreal',
+              911000,
+              '../img/moctoc.jpg',
+            )
+          ">
+          🛒 Thêm vào giỏ
+        </button>
+
+                <a href="moctoc.html" class="btn">Xem chi tiết</a>
+            </div>
+
+            <!-- SẢN PHẨM 3 -->
+
+            <div class="product">
+                <img src="../img/daugoixa.jpg" />
+
+                <h3 class="product-name">Bộ Gội Xả</h3>
+
+                <p class="price">327000đ</p>
+
+                <button onclick="
+            addToCart(
+              'Bộ Gội Xả L Oreal Giảm Gãy Rụng Tóc Giúp Tóc Chắc Khỏe',
+              327000,
+              '../img/daugoixa.jpg',
+            )
+          ">
+          🛒 Thêm vào giỏ
+        </button>
+
+                <a href="daugoixa.html" class="btn">Xem chi tiết</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../js/cart.js"></script>
+    ```
+
+</body>
+
+</html>
