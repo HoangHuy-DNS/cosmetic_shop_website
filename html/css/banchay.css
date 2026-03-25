@@ -1,0 +1,193 @@
+:root {
+  --primary: #326e51;
+  --primary-light: #4ea57a;
+  --accent: #ff9800;
+  --sale-red: #e53935;
+  --bg-body: #fff5f7; /* Tone hồng nhạt giống trang chủ */
+}
+
+body {
+  background-color: var(--bg-body);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tiêu đề hiệu ứng lấp lánh */
+.section-title {
+  color: var(--primary);
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #326e51, #bf953f, #326e51);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineTitle 4s linear infinite;
+}
+
+@keyframes shineTitle {
+  to { background-position: 200% center; }
+}
+
+/* Nút điều hướng Top */
+.btn-nav {
+  text-decoration: none;
+  background: white;
+  color: var(--primary);
+  padding: 8px 15px;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-nav:hover { background: var(--primary); color: white; }
+
+/* Card Sản Phẩm */
+.product-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0,0,0,0.03);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(50, 110, 81, 0.15);
+}
+
+/* Hiệu ứng vệt sáng lấp lánh khi hover ảnh */
+.img-box {
+  position: relative;
+  overflow: hidden;
+  background: #f9f9f9;
+}
+.img-box::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -150%;
+  width: 50%; height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.6), transparent);
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+.product-card:hover .img-box::after { left: 150%; }
+
+.product-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  transition: 0.5s;
+}
+.product-card:hover .product-img { transform: scale(1.08); }
+
+/* Badge & Heart */
+.product-badge {
+  position: absolute;
+  top: 12px; left: 12px;
+  z-index: 10;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+}
+.product-badge.hot { background: linear-gradient(45deg, #ff9800, #ffc107); }
+.product-badge.sale { background: var(--sale-red); }
+
+.product-heart {
+  position: absolute;
+  top: 12px; right: 12px;
+  z-index: 10;
+  color: #ff4d4f;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Phần thông tin - Chống lệch */
+.product-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Chiếm diện tích còn lại */
+}
+
+.brand {
+  font-size: 11px;
+  font-weight: 700;
+  color: #aaa;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.product-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  height: 40px; /* Cố định 2 dòng */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom: 10px;
+}
+
+.product-footer {
+  margin-top: auto; /* Đẩy cụm giá và nút xuống đáy */
+}
+
+.price-box { margin-bottom: 5px; }
+.sale { color: var(--primary); font-weight: 800; font-size: 17px; margin-right: 5px; }
+.original { color: #999; text-decoration: line-through; font-size: 12px; }
+
+.rating { font-size: 12px; color: #ffc107; margin-bottom: 10px; }
+.sold { color: #777; margin-left: 5px; font-size: 11px; }
+
+/* Nút bấm */
+.btn-group-custom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.add-cart-btn {
+  background: var(--primary);
+  background: linear-gradient(135deg, #326e51 0%, #4ea57a 100%);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: 0.3s;
+}
+.add-cart-btn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 4px 15px rgba(50, 110, 81, 0.3);
+}
+
+.btn-detail {
+  text-align: center;
+  text-decoration: none;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-detail:hover { background: #f0f7f3; }
+
+/* Custom Swiper Buttons */
+.swiper-button-next, .swiper-button-prev {
+  color: var(--primary);
+  background: white;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.swiper-button-next::after, .swiper-button-prev::after { font-size: 18px; font-weight: bold; }
