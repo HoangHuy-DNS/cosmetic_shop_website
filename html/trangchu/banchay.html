@@ -1,65 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
 
 <head>
     <meta charset="UTF-8">
-    <title>Sản phẩm bán chạy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm bán chạy - Hasaki Style</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/banchay.css">
 </head>
 
 <body>
 
     <div class="container my-5">
-        <div class="d-flex justify-content-between mb-4">
-            <a href="../trangchu/index.html" class="btn btn-hasaki">🏠 Home</a>
-            <a href="cart.html" class="btn btn-hasaki">🛒 Giỏ hàng</a>
-        </div>
-        <h2 class="section-title text-center mb-4">⭐ Sản phẩm bán chạy nhất</h2>
-        <div class="swiper-slide">
-            <div class="product-card">
-                <div class="product-badge">Bán chạy</div>
-                <div class="product-heart">❤</div>
-                <img src="../img/nươchoahong.jpg" class="product-img">
-
-                <div class="product-info">
-                    <p class="brand">Klairs</p>
-                    <h5 class="product-title">Nước Hoa Hồng Klairs Supple Preparation Unscented Toner</h5>
-
-                    <div class="product-footer" style="margin-top: auto;">
-                        <div class="price">
-                            <span class="sale">205.000₫</span>
-                            <span class="original">250.000₫</span>
-                        </div>
-                        <div class="rating">★★★★★ <span class="sold">Đã bán 1.2k</span></div>
-                        <button class="add-cart-btn">🛒 Thêm vào giỏ</button>
-                        <a href="#" class="btn btn-detail">Xem chi tiết</a>
-                    </div>
-                </div>
-            </div>
+        <div class="nav-header d-flex justify-content-between align-items-center mb-5">
+            <a href="../trangchu/index.html" class="btn-nav-custom">
+                <i class="fa-solid fa-house"></i> <span> Home</span>
+            </a>
+            <h2 class="section-title">⭐ SẢN PHẨM BÁN CHẠY NHẤT</h2>
+            <a href="cart.html" class="btn-nav-custom cart-btn position-relative">
+                <i class="fa-solid fa-cart-shopping"></i> <span>Giỏ hàng</span>
+                <span class="cart-badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+            </a>
         </div>
 
-        <!-- Swiper -->
-        <div class="swiper hot-products-swiper">
+        <div class="swiper hot-products-swiper px-2">
             <div class="swiper-wrapper">
 
                 <!-- Product 1 -->
                 <div class="swiper-slide">
                     <div class="product-card">
-                        <div class="product-badge">Bán chạy</div>
-                        <div class="product-heart">❤</div>
-                        <img src="../img/nươchoahong.jpg" alt="Nước Hoa Hồng Klairs" class="product-img">
+                        <div class="card-meta d-flex justify-content-between">
+                            <span class="badge-hot">Bán chạy</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="img-box position-relative">
+                            <img src="../img/nươchoahong.jpg" alt="Klairs Toner" class="product-img">
+                            <a href="../chitietsanpham/nuochoahong.html" class="quick-view position-absolute text-center">Xem chi tiết</a>
+                        </div>
                         <div class="product-info">
-                            <p class="brand">Klairs</p>
-                            <h5 class="product-title">Nước Hoa Hồng Klairs Supple Preparation Unscented Toner</h5>
-                            <div class="price">
-                                <span class="sale">205.000₫</span>
-                                <span class="original">250.000₫</span>
+                            <p class="brand">KLAIRS</p>
+                            <h5 class="product-title">Nước Hoa Hồng Klairs Supple Preparation Unscented Toner 180ml</h5>
+                            <div class="price-row d-flex align-items-center gap-2">
+                                <span class="sale-price">205.000₫</span>
+                                <span class="old-price">250.000₫</span>
                             </div>
-                            <div class="rating">★★★★★ <span class="sold">Đã bán 1.2k</span></div>
-                            <button class="add-cart-btn" onclick="addToCart('Nước Hoa Hồng Klairs Supple Preparation Unscented Toner',205000,'../img/nươchoahong.jpg')">🛒 Thêm vào giỏ</button>
-                            <a href="../chitietsanpham/nuochoahong.html" class="btn btn-detail">Xem chi tiết</a>
+                            <div class="stock-status mt-2">
+                                <div class="progress" style="height: 6px; border-radius: 4px;">
+                                    <div class="progress-bar bg-danger" style="width: 85%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between status-text mt-1">
+                                    <span>🔥 Sắp cháy hàng</span>
+                                    <span>1.2k đã bán</span>
+                                </div>
+                            </div>
+                            <div class="action-btns mt-3">
+                                <button class="add-to-cart w-100" onclick="addToCart('Nước Hoa Hồng Klairs', 205000, '../img/nươchoahong.jpg')">
+                                    THÊM GIỎ HÀNG
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -67,19 +68,35 @@
                 <!-- Product 2 -->
                 <div class="swiper-slide">
                     <div class="product-card">
-                        <div class="product-badge sale">-34%</div>
-                        <div class="product-heart">❤</div>
-                        <img src="../img/mascara.jpg" alt="Mascara Maybelline" class="product-img">
+                        <div class="card-meta d-flex justify-content-between">
+                            <span class="badge-sale">-34%</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="img-box position-relative">
+                            <img src="../img/mascara.jpg" alt="Mascara" class="product-img">
+                            <a href="../thuonghieu/Mascara.html" class="quick-view position-absolute text-center">Xem chi tiết</a>
+                        </div>
                         <div class="product-info">
-                            <p class="brand">Maybelline</p>
-                            <h5 class="product-title">Mascara Maybelline Lash Sensational Tơi Dài Mi</h5>
-                            <div class="price">
-                                <span class="sale">210.000₫</span>
-                                <span class="original">238.000₫</span>
+                            <p class="brand">MAYBELLINE</p>
+                            <h5 class="product-title">Mascara Maybelline Lash Sensational Tơi Dài Mi Chống Lem</h5>
+                            <div class="price-row d-flex align-items-center gap-2">
+                                <span class="sale-price">210.000₫</span>
+                                <span class="old-price">238.000₫</span>
                             </div>
-                            <div class="rating">★★★★★ <span class="sold">Đã bán 950</span></div>
-                            <button class="add-cart-btn" onclick="addToCart('Mascara Maybelline Lash Sensational',210000,'../img/mascara.jpg')">🛒 Thêm vào giỏ</button>
-                            <a href="../thuonghieu/Mascara.html" class="btn btn-detail">Xem chi tiết</a>
+                            <div class="stock-status mt-2">
+                                <div class="progress" style="height: 6px; border-radius: 4px;">
+                                    <div class="progress-bar bg-warning" style="width: 60%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between status-text mt-1">
+                                    <span>Đang bán chạy</span>
+                                    <span>950 đã bán</span>
+                                </div>
+                            </div>
+                            <div class="action-btns mt-3">
+                                <button class="add-to-cart w-100" onclick="addToCart('Mascara Maybelline', 210000, '../img/mascara.jpg')">
+                                    THÊM GIỎ HÀNG
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -87,19 +104,35 @@
                 <!-- Product 3 -->
                 <div class="swiper-slide">
                     <div class="product-card">
-                        <div class="product-badge">Bán chạy</div>
-                        <div class="product-heart">❤</div>
-                        <img src="../img/kemduongK.jpg" alt="Kem dưỡng Klairs" class="product-img">
+                        <div class="card-meta d-flex justify-content-between">
+                            <span class="badge-hot">Bán chạy</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="img-box position-relative">
+                            <img src="../img/kemduongK.jpg" alt="Kem dưỡng Klairs" class="product-img">
+                            <a href="../chitietsanpham/kemduongKlairs.html" class="quick-view position-absolute text-center">Xem chi tiết</a>
+                        </div>
                         <div class="product-info">
-                            <p class="brand">Klairs</p>
-                            <h5 class="product-title">Kem dưỡng Klairs Midnight Blue Cream</h5>
-                            <div class="price">
-                                <span class="sale">294.000₫</span>
-                                <span class="original">330.000₫</span>
+                            <p class="brand">KLAIRS</p>
+                            <h5 class="product-title">Kem dưỡng Klairs Midnight Blue Cream 60ml</h5>
+                            <div class="price-row d-flex align-items-center gap-2">
+                                <span class="sale-price">294.000₫</span>
+                                <span class="old-price">330.000₫</span>
                             </div>
-                            <div class="rating">★★★★★ <span class="sold">Đã bán 800</span></div>
-                            <button class="add-cart-btn" onclick="addToCart('Kem dưỡng Klairs Midnight Blue Cream',294000,'../img/kemduongK.jpg')">🛒 Thêm vào giỏ</button>
-                            <a href="../chitietsanpham/kemduongKlairs.html" class="btn btn-detail">Xem chi tiết</a>
+                            <div class="stock-status mt-2">
+                                <div class="progress" style="height: 6px; border-radius: 4px;">
+                                    <div class="progress-bar bg-danger" style="width: 70%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between status-text mt-1">
+                                    <span>Đang bán chạy</span>
+                                    <span>800 đã bán</span>
+                                </div>
+                            </div>
+                            <div class="action-btns mt-3">
+                                <button class="add-to-cart w-100" onclick="addToCart('Kem dưỡng Klairs Midnight Blue Cream', 294000, '../img/kemduongK.jpg')">
+                                    THÊM GIỎ HÀNG
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -107,19 +140,35 @@
                 <!-- Product 4 -->
                 <div class="swiper-slide">
                     <div class="product-card">
-                        <div class="product-badge sale">-15%</div>
-                        <div class="product-heart">❤</div>
-                        <img src="../img/moctoc.jpg" alt="Tinh chất mọc tóc Loreal" class="product-img">
+                        <div class="card-meta d-flex justify-content-between">
+                            <span class="badge-sale">-15%</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="img-box position-relative">
+                            <img src="../img/moctoc.jpg" alt="Tinh chất mọc tóc Loreal" class="product-img">
+                            <a href="../chitietsanpham/moctoc.html" class="quick-view position-absolute text-center">Xem chi tiết</a>
+                        </div>
                         <div class="product-info">
-                            <p class="brand">L'Oreal</p>
-                            <h5 class="product-title">Tinh chất mọc tóc Loreal</h5>
-                            <div class="price">
-                                <span class="sale">911.000₫</span>
-                                <span class="original">1.070.000₫</span>
+                            <p class="brand">L'OREAL</p>
+                            <h5 class="product-title">Tinh chất mọc tóc Loreal 120ml</h5>
+                            <div class="price-row d-flex align-items-center gap-2">
+                                <span class="sale-price">911.000₫</span>
+                                <span class="old-price">1.070.000₫</span>
                             </div>
-                            <div class="rating">★★★★★ <span class="sold">Đã bán 500</span></div>
-                            <button class="add-cart-btn" onclick="addToCart('Tinh chất mọc tóc Loreal',911000,'../img/moctoc.jpg')">🛒 Thêm vào giỏ</button>
-                            <a href="../chitietsanpham/moctoc.html" class="btn btn-detail">Xem chi tiết</a>
+                            <div class="stock-status mt-2">
+                                <div class="progress" style="height: 6px; border-radius: 4px;">
+                                    <div class="progress-bar bg-warning" style="width: 50%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between status-text mt-1">
+                                    <span>Đang bán chạy</span>
+                                    <span>500 đã bán</span>
+                                </div>
+                            </div>
+                            <div class="action-btns mt-3">
+                                <button class="add-to-cart w-100" onclick="addToCart('Tinh chất mọc tóc Loreal', 911000, '../img/moctoc.jpg')">
+                                    THÊM GIỎ HÀNG
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -127,79 +176,143 @@
                 <!-- Product 5 -->
                 <div class="swiper-slide">
                     <div class="product-card">
-                        <div class="product-badge">Bán chạy</div>
-                        <div class="product-heart">❤</div>
-                        <img src="../img/daugoixa.jpg" alt="Bộ Gội Xả Loreal" class="product-img">
+                        <div class="card-meta d-flex justify-content-between">
+                            <span class="badge-hot">Bán chạy</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="img-box position-relative">
+                            <img src="../img/daugoixa.jpg" alt="Bộ Gội Xả Loreal" class="product-img">
+                            <a href="../chitietsanpham/daugoixa.html" class="quick-view position-absolute text-center">Xem chi tiết</a>
+                        </div>
                         <div class="product-info">
-                            <p class="brand">L'Oreal</p>
-                            <h5 class="product-title">Bộ Gội Xả L'Oreal Giảm Gãy Rụng Tóc</h5>
-                            <div class="price">
-                                <span class="sale">327.000₫</span>
-                                <span class="original">380.000₫</span>
+                            <p class="brand">L'OREAL</p>
+                            <h5 class="product-title">Bộ Gội Xả L'Oreal Giảm Gãy Rụng Tóc 400ml</h5>
+                            <div class="price-row d-flex align-items-center gap-2">
+                                <span class="sale-price">327.000₫</span>
+                                <span class="old-price">380.000₫</span>
                             </div>
-                            <div class="rating">★★★★★ <span class="sold">Đã bán 620</span></div>
-                            <button class="add-cart-btn" onclick="addToCart('Bộ Gội Xả L Oreal',327000,'../img/daugoixa.jpg')">🛒 Thêm vào giỏ</button>
-                            <a href="../chitietsanpham/daugoixa.html" class="btn btn-detail">Xem chi tiết</a>
+                            <div class="stock-status mt-2">
+                                <div class="progress" style="height: 6px; border-radius: 4px;">
+                                    <div class="progress-bar bg-danger" style="width: 60%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between status-text mt-1">
+                                    <span>Đang bán chạy</span>
+                                    <span>620 đã bán</span>
+                                </div>
+                            </div>
+                            <div class="action-btns mt-3">
+                                <button class="add-to-cart w-100" onclick="addToCart('Bộ Gội Xả Loreal', 327000, '../img/daugoixa.jpg')">
+                                    THÊM GIỎ HÀNG
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product 6 - Olay -->
+                <!-- Product 6 -->
                 <div class="swiper-slide">
                     <div class="product-card">
-                        <div class="product-badge sale">-20%</div>
-                        <div class="product-heart">❤</div>
-                        <img src="../img/kemduong.jpg" alt="Kem dưỡng Olay" class="product-img">
+                        <div class="card-meta d-flex justify-content-between">
+                            <span class="badge-sale">-20%</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="img-box position-relative">
+                            <img src="../img/kemduong.jpg" alt="Kem dưỡng Olay" class="product-img">
+                            <a href="../chitietsanpham/kemduong.html" class="quick-view position-absolute text-center">Xem chi tiết</a>
+                        </div>
                         <div class="product-info">
-                            <p class="brand">Olay</p>
-                            <h5 class="product-title">Kem Dưỡng Olay Luminous Ban Đêm</h5>
-                            <div class="price">
-                                <span class="sale">163.000₫</span>
-                                <span class="original">204.000₫</span>
+                            <p class="brand">OLAY</p>
+                            <h5 class="product-title">Kem Dưỡng Olay Luminous Ban Đêm 50ml</h5>
+                            <div class="price-row d-flex align-items-center gap-2">
+                                <span class="sale-price">163.000₫</span>
+                                <span class="old-price">204.000₫</span>
                             </div>
-                            <div class="rating">★★★★★ <span class="sold">Đã bán 750</span></div>
-                            <button class="add-cart-btn" onclick="addToCart('Kem Dưỡng Olay Luminous Ban Đêm',163000,'../img/kemduong.jpg')">🛒 Thêm vào giỏ</button>
-                            <a href="../chitietsanpham/kemduong.html" class="btn btn-detail">Xem chi tiết</a>
+                            <div class="stock-status mt-2">
+                                <div class="progress" style="height: 6px; border-radius: 4px;">
+                                    <div class="progress-bar bg-warning" style="width: 70%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between status-text mt-1">
+                                    <span>Đang bán chạy</span>
+                                    <span>750 đã bán</span>
+                                </div>
+                            </div>
+                            <div class="action-btns mt-3">
+                                <button class="add-to-cart w-100" onclick="addToCart('Kem Dưỡng Olay Luminous Ban Đêm', 163000, '../img/kemduong.jpg')">
+                                    THÊM GIỎ HÀNG
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product 7 - Olay -->
+                <!-- Product 7 -->
                 <div class="swiper-slide">
                     <div class="product-card">
-                        <div class="product-badge">Bán chạy</div>
-                        <div class="product-heart">❤</div>
-                        <img src="../img/suatam.jpg" alt="Sữa tắm Olay" class="product-img">
+                        <div class="card-meta d-flex justify-content-between">
+                            <span class="badge-hot">Bán chạy</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="img-box position-relative">
+                            <img src="../img/suatam.jpg" alt="Sữa tắm Olay" class="product-img">
+                            <a href="../chitietsanpham/suatam.html" class="quick-view position-absolute text-center">Xem chi tiết</a>
+                        </div>
                         <div class="product-info">
-                            <p class="brand">Olay</p>
-                            <h5 class="product-title">Sữa tắm Olay Strawberry Mint</h5>
-                            <div class="price">
-                                <span class="sale">309.000₫</span>
-                                <span class="original">380.000₫</span>
+                            <p class="brand">OLAY</p>
+                            <h5 class="product-title">Sữa tắm Olay Strawberry Mint 250ml</h5>
+                            <div class="price-row d-flex align-items-center gap-2">
+                                <span class="sale-price">309.000₫</span>
+                                <span class="old-price">380.000₫</span>
                             </div>
-                            <div class="rating">★★★★★ <span class="sold">Đã bán 630</span></div>
-                            <button class="add-cart-btn" onclick="addToCart('Sữa tắm Olay Strawberry Mint',309000,'../img/suatam.jpg')">🛒 Thêm vào giỏ</button>
-                            <a href="../chitietsanpham/suatam.html" class="btn btn-detail">Xem chi tiết</a>
+                            <div class="stock-status mt-2">
+                                <div class="progress" style="height: 6px; border-radius: 4px;">
+                                    <div class="progress-bar bg-danger" style="width: 65%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between status-text mt-1">
+                                    <span>Đang bán chạy</span>
+                                    <span>630 đã bán</span>
+                                </div>
+                            </div>
+                            <div class="action-btns mt-3">
+                                <button class="add-to-cart w-100" onclick="addToCart('Sữa tắm Olay Strawberry Mint', 309000, '../img/suatam.jpg')">
+                                    THÊM GIỎ HÀNG
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Product 8 - Maybelline -->
+                <!-- Product 8 -->
                 <div class="swiper-slide">
                     <div class="product-card">
-                        <div class="product-badge">Bán chạy</div>
-                        <div class="product-heart">❤</div>
-                        <img src="../img/kemnen.jpg" alt="Kem nền Maybelline" class="product-img">
+                        <div class="card-meta d-flex justify-content-between">
+                            <span class="badge-hot">Bán chạy</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="img-box position-relative">
+                            <img src="../img/kemnen.jpg" alt="Kem nền Maybelline" class="product-img">
+                            <a href="../chitietsanpham/kemnen.html" class="quick-view position-absolute text-center">Xem chi tiết</a>
+                        </div>
                         <div class="product-info">
-                            <p class="brand">Maybelline</p>
-                            <h5 class="product-title">Kem nền Maybelline Fit Me</h5>
-                            <div class="price">
-                                <span class="sale">250.000₫</span>
-                                <span class="original">280.000₫</span>
+                            <p class="brand">MAYBELLINE</p>
+                            <h5 class="product-title">Kem nền Maybelline Fit Me 30ml</h5>
+                            <div class="price-row d-flex align-items-center gap-2">
+                                <span class="sale-price">250.000₫</span>
+                                <span class="old-price">280.000₫</span>
                             </div>
-                            <div class="rating">★★★★★ <span class="sold">Đã bán 900</span></div>
-                            <button class="add-cart-btn" onclick="addToCart('Kem nền Maybelline Fit Me',250000,'../img/kemnen.jpg')">🛒 Thêm vào giỏ</button>
-                            <a href="../chitietsanpham/kemnen.html" class="btn btn-detail">Xem chi tiết</a>
+                            <div class="stock-status mt-2">
+                                <div class="progress" style="height: 6px; border-radius: 4px;">
+                                    <div class="progress-bar bg-warning" style="width: 75%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between status-text mt-1">
+                                    <span>Đang bán chạy</span>
+                                    <span>900 đã bán</span>
+                                </div>
+                            </div>
+                            <div class="action-btns mt-3">
+                                <button class="add-to-cart w-100" onclick="addToCart('Kem nền Maybelline Fit Me', 250000, '../img/kemnen.jpg')">
+                                    THÊM GIỎ HÀNG
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -207,56 +320,117 @@
                 <!-- Product 9 -->
                 <div class="swiper-slide">
                     <div class="product-card">
-                        <div class="product-badge">Bán chạy</div>
-                        <div class="product-heart">❤</div>
-                        <img src="../img/kemruamat.jpg" alt="Kem rửa mặt" class="product-img">
+                        <div class="card-meta d-flex justify-content-between">
+                            <span class="badge-hot">Bán chạy</span>
+                            <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="img-box position-relative">
+                            <img src="../img/kemruamat.jpg" alt="Kem rửa mặt" class="product-img">
+                            <a href="../chitietsanpham/kemruamatt.html" class="quick-view position-absolute text-center">Xem chi tiết</a>
+                        </div>
                         <div class="product-info">
-                            <p class="brand">Maybelline</p>
-                            <h5 class="product-title">Kem rửa mặt Maybelline Deep Clean</h5>
-                            <div class="price">
-                                <span class="sale">99.000₫</span>
-                                <span class="original">120.000₫</span>
+                            <p class="brand">MAYBELLINE</p>
+                            <h5 class="product-title">Kem rửa mặt Maybelline Pure Clean 100ml</h5>
+                            <div class="price-row d-flex align-items-center gap-2">
+                                <span class="sale-price">120.000₫</span>
+                                <span class="old-price">150.000₫</span>
                             </div>
-                            <div class="rating">★★★★★ <span class="sold">Đã bán 400</span></div>
-                            <button class="add-cart-btn" onclick="addToCart('Kem rửa mặt Maybelline Deep Clean',99000,'../img/kemruamat.jpg')">🛒 Thêm vào giỏ</button>
-                            <a href="../chitietsanpham/kemruamatt.html" class="btn btn-detail">Xem chi tiết</a>
+                            <div class="stock-status mt-2">
+                                <div class="progress" style="height: 6px; border-radius: 4px;">
+                                    <div class="progress-bar bg-danger" style="width: 80%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between status-text mt-1">
+                                    <span>Đang bán chạy</span>
+                                    <span>1.1k đã bán</span>
+                                </div>
+                            </div>
+                            <div class="action-btns mt-3">
+                                <button class="add-to-cart w-100" onclick="addToCart('Kem rửa mặt Maybelline Pure Clean', 120000, '../img/kemruamat.jpg')">
+                                    THÊM GIỎ HÀNG
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-
             </div>
-            <!-- Swiper navigation -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+
+            <!-- Navigation Arrows -->
+            <div class="swiper-button-next custom-arrow"></div>
+            <div class="swiper-button-prev custom-arrow"></div>
         </div>
-
     </div>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../js/cart.js"></script>
     <script>
         const swiper = new Swiper('.hot-products-swiper', {
             slidesPerView: 5,
-            spaceBetween: 20,
+            spaceBetween: 15,
+            loop: true,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
             breakpoints: {
-                0: {
-                    slidesPerView: 2
-                },
-                768: {
-                    slidesPerView: 3
-                },
-                992: {
-                    slidesPerView: 5
-                }
+                0: { slidesPerView: 2, spaceBetween: 10 },
+                768: { slidesPerView: 3, spaceBetween: 15 },
+                1024: { slidesPerView: 5, spaceBetween: 15 }
             }
         });
-    </script>
 
+        function addToCart(name, price, img) {
+            console.log('Thêm vào giỏ:', name, price, img);
+            // Bạn có thể thêm code lưu vào giỏ hàng ở đây
+        }
+        // Lấy giỏ hàng từ localStorage
+        function getCart() {
+            let cart = localStorage.getItem('cart');
+            return cart ? JSON.parse(cart) : [];
+        }
+
+      // Lưu giỏ hàng vào localStorage
+        function saveCart(cart) {
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartBadge(); // cập nhật badge sau khi lưu
+        }
+
+        // Cập nhật số lượng badge trên nút giỏ hàng
+        function updateCartBadge() {
+            const cart = getCart();
+            const badge = document.querySelector('.cart-badge');
+            if (badge) {
+                // Tính tổng số lượng sản phẩm
+                let totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+                badge.textContent = totalQuantity;
+            }
+        }
+
+        // Thêm sản phẩm vào giỏ hàng
+        function addToCart(name, price, img) {
+            let cart = getCart();
+            
+            // Kiểm tra nếu sản phẩm đã tồn tại thì tăng số lượng
+            const existingIndex = cart.findIndex(item => item.name === name);
+            if (existingIndex >= 0) {
+                cart[existingIndex].quantity += 1;
+            } else {
+                cart.push({
+                    name: name,
+                    price: price,
+                    img: img, // lưu đường dẫn đúng từ root hoặc từ cart.html
+                    quantity: 1
+                });
+            }
+            
+            saveCart(cart);
+            alert(name + " đã được thêm vào giỏ hàng!");
+        }
+
+        // Khởi tạo badge lúc load trang
+        document.addEventListener('DOMContentLoaded', updateCartBadge);
+            </script>
+    
+  
 </body>
-
 </html>
