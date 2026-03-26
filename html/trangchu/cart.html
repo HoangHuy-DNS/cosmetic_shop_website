@@ -10,80 +10,84 @@
     <header>
       <h1>Mỹ phẩm Online</h1>
       <div class="menu">
-      <h2>🛒 Giỏ hàng của bạn</h2>
-      <a href="index.html" class="home">🏠 Home</a>
+        <h2>🛒 Giỏ hàng của bạn</h2>
+        <a href="index.html" class="home">🏠 Home</a>
       </div>
-    <div class="order-btn">
     </header>
+
     <div class="container">
-      <div class="tdd"><a href="orders.html">📦 Theo dõi đơn</a></div>
-    <table>
-      <tr>
-        <th>Sản phẩm</th>
-        <th>Tên</th>
-        <th>Giá</th>
-        <th>Số lượng</th>
-        <th>Tạm tính</th>
-        <th>Xóa</th>
-      </tr>
+      <div class="tdd">
+        <a href="orders.html">📦 Theo dõi đơn</a>
+      </div>
 
-      <tbody id="cart-items"></tbody>
-    </table>
+      <table>
+        <tr>
+          <th>Sản phẩm</th>
+          <th>Tên</th>
+          <th>Giá</th>
+          <th>Số lượng</th>
+          <th>Tạm tính</th>
+          <th>Xóa</th>
+        </tr>
 
-    <h2 id="total"></h2>
+        <tbody id="cart-items"></tbody>
+      </table>
 
-    <div class="checkout">
-      <a href="checkout.html">
-        <button>Thanh toán</button>
-      </a>
+      <h2 id="total"></h2>
+
+      <div class="checkout">
+        <a href="checkout.html">
+          <button>Thanh toán</button>
+        </a>
+      </div>
     </div>
 
-    <script src="../js/cart.js"></script>
+    <footer>
+      <div class="f">
+        <div>
+          <h3>Hỗ trợ khách hàng</h3>
+          <p>
+            <span style="color: orange">Hotline: 0845628919</span><br />
+            (Miễn phí 08-22h kể cả T7, CN)<br />
+            Hướng dẫn đặt hàng<br />
+            Phương thức thanh toán<br />
+            Chính sách đổi trả
+          </p>
+        </div>
 
+        <div>
+          <h3>Cập nhật khuyến mãi</h3>
+          <input type="email" placeholder="Email của bạn" class="e" />
+          <button class="dk">Đăng ký</button>
+          <br /><br />
+          <img src="../img/image.png" width="100%" />
+        </div>
+
+        <div>
+          <p>
+            <b>DANH MỤC SẢN PHẨM</b><br />
+            Mỹ phẩm High-End
+          </p>
+          <p>
+            Chăm sóc cá nhân<br />
+            Băng vệ sinh<br />
+            Khử mùi
+          </p>
+        </div>
+
+        <div>
+          <p>
+            <b>Nước hoa</b><br />
+            Nước hoa nữ<br />
+            Nước hoa nam
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/cart.js"></script>
     <script>
       displayCart();
     </script>
-    </div>
   </body>
-  <footer>
-    <div class="f">
-
-<div>
-<h3>Hỗ trợ khách hàng</h3>
-<p>
-<span>Hotline: 0845628919</span><br>
-(Miễn phí 08-22h kể cả T7, CN)<br>
-Hướng dẫn đặt hàng<br>
-Phương thức thanh toán<br>
-Chính sách đổi trả
-</p>
-</div>
-
-<div>
-<h3>Cập nhật khuyến mãi</h3>
-<input type="email" placeholder="Email của bạn">
-<button class="dk">Đăng ký</button>
-</div>
-
-<div>
-<p><b>DANH MỤC SẢN PHẨM</b><br>
-Mỹ phẩm High-End
-</p>
-
-<p>
-Chăm sóc cá nhân<br>
-Băng vệ sinh<br>
-Khử mùi
-</p>
-</div>
-
-<div>
-<p><b>Nước hoa</b><br>
-Nước hoa nữ<br>
-Nước hoa nam
-</p>
-</div>
-
-</div>
-  </footer>
 </html>

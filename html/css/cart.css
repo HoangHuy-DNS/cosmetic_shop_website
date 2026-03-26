@@ -1,85 +1,84 @@
 body {
   font-family: Arial;
-  line-height:1.6;
+  line-height: 1.6;
+  background: linear-gradient(0deg, rgb(248, 174, 186), white);
 }
-*{
-  margin: auto;
+
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  padding:10px;
 }
 
 header {
-  height: 170px;
+  background: linear-gradient(0deg, rgb(240, 148, 163), pink);
   color: white;
-  border: solid 1px rgb(149, 149, 149);
-  background: linear-gradient(0deg, rgb(240, 148, 163),pink);
-}
-.container{
-  background: #fdd9eb;
-}
-header h1{
-  text-align: center;
-  text-shadow: 10px 0px 3px rgb(120, 118, 118);
-}
-.menu{
-  justify-content: space-around;
-}
-.tdd{
-  margin-top: 10px;
-}
-.tdd a{
-  border: solid 1px black;
-  padding: 7px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: black;
-}
-
-.tdd a:hover{
-  color: white;
-  background-color: rgb(245, 194, 133);
-}
-
-.products {
-  display: flex;
-  gap: 30px;
-  padding: 30px;
-}
-
-.product {
-  background: white;
   padding: 20px;
-  border-radius: 10px;
   text-align: center;
-  width: 200px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.product img {
-  width: 150px;
-}
-
-.price {
-  color: red;
-  font-weight: bold;
-}
-
-.btn {
-  display: inline-block;
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 10px;
+}
+
+.home {
+  text-decoration: none;
+  background: white;
+  color: #ff69b4;
   padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.home:hover {
   background: #ff69b4;
   color: white;
-  text-decoration: none;
-  border-radius: 5px;
 }
 
+/* CONTAINER */
+.container {
+  background: #fdd9eb;
+  padding: 20px;
+}
+
+/* BUTTON THEO DÕI */
+.tdd {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tdd a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: #bbeeee;
+  color: #140c0c;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.tdd a:hover {
+  background: #279f9f;
+  color: white;
+  border: 1px solid #0f7f7f;
+}
+
+/* TABLE */
 table {
-  width: 70%;
-  margin: auto;
-  margin-top: 40px;
+  width: 80%;
+  margin: 20px auto;
   border-collapse: collapse;
   background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background: #ffb6c1;
 }
 
 th,
@@ -88,98 +87,59 @@ td {
   border: 1px solid #ddd;
   text-align: center;
 }
-.home {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  font-size: 18px;
-  text-decoration: none;
-  font-weight: bold;
-}
+
+/* CHECKOUT */
 .checkout {
   text-align: right;
-  margin-top: 20px;
+  width: 80%;
+  margin: 20px auto;
 }
 
 .checkout button {
   background: red;
   color: white;
-  border: none;
   padding: 12px 20px;
-  font-size: 16px;
-  border-radius: 5px;
+  border-radius: 6px;
+  border: none;
   cursor: pointer;
 }
-.order-btn {
-  margin: 20px 0;
+
+.checkout button:hover {
+  background: darkred;
 }
 
-.order-btn a {
-  background: #4caf50;
-  color: white;
-  text-decoration: none;
-  padding: 10px 18px;
-  border-radius: 6px;
-  font-size: 15px;
-  font-weight: bold;
-  display: inline-block;
-  transition: 0.3s;
+/* FOOTER */
+footer {
+  margin-top: 30px;
 }
 
-.order-btn a:hover {
-  background: #3e8e41;
-  transform: scale(1.05);
-}
-.back-cart {
-  margin: 20px 0;
-}
-
-.back-cart a {
-  display: inline-block;
-  background: #ff4d4d;
-  color: white;
-  text-decoration: none;
-  padding: 10px 18px;
-  border-radius: 6px;
-  font-size: 15px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.back-cart a:hover {
-  background: #e60023;
-  transform: scale(1.05);
-}
-footer{
-  padding: 10px 0px;
-}
-.f{
-  display:flex;
+.f {
+  display: flex;
   justify-content: space-between;
-  border:1px solid #ddd;
-  border-radius:6px;
-  background-color: #77a18d;
-}
-.f input{
-    font-size: 18px;
-    border-radius: 10px;
-    padding: 6px;
+  flex-wrap: wrap;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background: white;
 }
 
-.dk{
-background:orange;
-border-radius: 10px;
+.f div {
+  width: 23%;
 }
 
-span{
-color:orange;
+.e {
+  padding: 7px;
+  width: 100%;
 }
-.cart-btn, .home-btn{
-    border: solid 1px rgb(78, 77, 77);
-    padding: 3px;
-    border-radius: 7px;
+
+button {
+  cursor: pointer;
+  background: rgb(189, 226, 189);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
 }
-.cart-btn:hover, .home-btn:hover{
-    background: orange;
-    color: white;
+
+.dk {
+  background: orange;
 }

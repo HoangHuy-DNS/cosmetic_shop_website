@@ -1,0 +1,80 @@
+body {
+  font-family: Arial;
+  line-height: 1.6;
+  background: linear-gradient(0deg, rgb(248, 174, 186), white);
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: pink;
+}
+footer {
+  margin-top: 30px;
+}
+
+.f {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  background: white;
+}
+
+.f div {
+  width: 23%;
+}
+button {
+  cursor: pointer;
+  background: rgb(44, 192, 44);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.dk {
+  background: orange;
+}
+
+.e {
+  padding: 7px;
+  width: 100%;
+}
+.back-cart a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid #6cf5f5;
+  text-decoration: none;
+  color: #0b0808;
+  background: #90e8e8;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.back-cart a:hover {
+  background: #0b8282;
+  color: #f8f9f9;
+  border: 1px solid #f6f7f7;
+}
