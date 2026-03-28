@@ -1,181 +1,124 @@
-body{
-font-family:Arial;
-margin:0;
-background:#f5f5f5;
+:root {
+    --primary-color: #2a704a; 
+    --hover-color: #1e5236;
+    --bg-color: #f5f5f5;
+    --text-color: #333;
 }
+
+body { font-family: Arial, sans-serif; margin: 0; background: var(--bg-color); }
 
 /* HEADER */
+header { display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+.logo { font-size: 24px; font-weight: bold; color: var(--primary-color); }
+.menu a { margin-left: 20px; text-decoration: none; color: var(--text-color); font-weight: bold; transition: 0.2s; }
+.menu a:hover { color: var(--primary-color); }
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 40px;
-background:white;
-}
-
-.logo{
-font-size:24px;
-font-weight:bold;
-color:#9bbf9f;
-}
-
-.menu a{
-margin-left:20px;
-text-decoration:none;
-color:#333;
-}
-
-/* HERO */
-
-.hero{
-background:#9bbf9f;
-color:white;
-text-align:center;
-padding:60px 20px;
-}
-
-.search-box{
-width:500px;
-max-width:90%;
-margin:auto;
-display:flex;
-margin-top:20px;
-}
-
-.search-box input{
-flex:1;
-padding:12px;
-border:none;
-border-radius:25px 0 0 25px;
-}
-
-.search-box button{
-border:none;
-padding:12px 18px;
-border-radius:0 25px 25px 0;
-background:white;
-cursor:pointer;
-}
-
-.contact{
-margin-top:20px;
-}
-
-.contact span{
-margin:0 15px;
-cursor:pointer;
-}
+/* HERO & TIM KIEM */
+.hero { background: var(--primary-color); color: white; text-align: center; padding: 60px 20px; }
+.search-box { width: 600px; max-width: 90%; margin: auto; display: flex; margin-top: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 25px; }
+.search-box input { flex: 1; padding: 15px 20px; border: none; border-radius: 25px 0 0 25px; outline: none; font-size: 15px; }
+.search-box button { border: none; padding: 12px 25px; border-radius: 0 25px 25px 0; background: white; color: var(--primary-color); cursor: pointer; font-size: 16px; transition: 0.2s; }
+.search-box button:hover { background: #eee; }
+.contact { margin-top: 30px; font-size: 16px; }
+.contact span:hover { opacity: 0.8; }
 
 /* SERVICES */
+.services { display: flex; flex-wrap: wrap; justify-content: center; background: white; padding: 40px 20px; margin: 20px 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.service { width: 130px; margin: 15px; text-align: center; cursor: pointer; transition: 0.3s; }
+.service i { font-size: 28px; background: #f0f0f0; color: var(--primary-color); padding: 20px; border-radius: 50%; margin-bottom: 15px; transition: 0.3s; }
+.service p { margin: 0; font-size: 14px; font-weight: bold; color: var(--text-color); transition: 0.3s;}
+.service:hover i { background: var(--primary-color); color: white; box-shadow: 0 4px 10px rgba(42, 112, 74, 0.3); }
+.service:hover p { color: var(--primary-color); }
 
-.services{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-background:white;
-padding:30px;
+/* HIGHLIGHT ĐỔI TRẢ */
+.service.highlight-service i { background: #fff3cd; color: #d97706; box-shadow: 0 4px 15px rgba(217, 119, 6, 0.15); }
+.service.highlight-service:hover i { background: #d97706; color: white; transform: translateY(-3px); box-shadow: 0 6px 20px rgba(217, 119, 6, 0.3); }
+.service.highlight-service:hover p { color: #d97706; }
+
+/* MODAL CHUNG */
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); align-items: center; justify-content: center; animation: fadeIn 0.3s ease-in-out; }
+.modal-content { background-color: #fff; padding: 30px; border-radius: 12px; width: 90%; max-width: 500px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); position: relative; }
+.close-modal { position: absolute; right: 20px; top: 15px; font-size: 28px; cursor: pointer; color: #999; line-height: 1; transition: 0.2s;}
+.close-modal:hover { color: var(--primary-color); }
+.modal-content h2 { margin-top: 0; color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 20px; }
+.modal-body-content { font-size: 15px; line-height: 1.6; color: #444; }
+
+/* MODAL XÁC NHẬN ĐỔI TRẢ */
+.confirm-content { text-align: center; max-width: 420px; }
+.confirm-icon { font-size: 55px; color: #d97706; margin-bottom: 10px; }
+.confirm-content h2 { border-bottom: none; color: #333; margin-bottom: 10px; padding-bottom: 0; }
+.confirm-content p { color: #666; font-size: 16px; margin-bottom: 25px; }
+.confirm-actions { display: flex; justify-content: center; gap: 15px; }
+.confirm-actions button { padding: 12px 25px; border: none; border-radius: 25px; font-size: 15px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+.btn-cancel { background: #f0f0f0; color: #555; }
+.btn-cancel:hover { background: #e0e0e0; }
+.btn-agree { background: var(--primary-color); color: white; box-shadow: 0 4px 10px rgba(42, 112, 74, 0.3); }
+.btn-agree:hover { background: var(--hover-color); transform: translateY(-2px); }
+
+/* MODAL ĐĂNG NHẬP */
+.login-content { max-width: 400px; }
+.login-content h2 { text-align: center; border-bottom: none; margin-bottom: 25px; }
+.login-form { display: flex; flex-direction: column; gap: 15px; }
+.input-group { display: flex; flex-direction: column; gap: 5px; text-align: left; }
+.input-group label { font-size: 14px; font-weight: bold; color: #555; }
+.input-group input { padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; outline: none; transition: 0.3s; }
+.input-group input:focus { border-color: var(--primary-color); box-shadow: 0 0 5px rgba(42, 112, 74, 0.2); }
+
+/* CSS CHO LỖI ĐĂNG NHẬP (MỚI) */
+.error-text {
+    color: #dc3545;
+    font-size: 13px;
+    font-style: italic;
+    display: none; /* Ẩn đi mặc định */
+    margin-top: 2px;
 }
 
-.service{
-width:120px;
-margin:15px;
-text-align:center;
-cursor:pointer;
+.login-options { display: flex; justify-content: space-between; font-size: 13px; color: #555; align-items: center; }
+.forgot-pw { color: var(--primary-color); text-decoration: none; font-weight: bold; }
+.forgot-pw:hover { text-decoration: underline; }
+.btn-login { background: var(--primary-color); color: white; border: none; padding: 12px; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; margin-top: 10px; }
+.btn-login:hover { background: var(--hover-color); transform: translateY(-2px); box-shadow: 0 4px 10px rgba(42, 112, 74, 0.3); }
+.register-link { text-align: center; font-size: 14px; margin-top: 15px; color:#555;}
+.register-link a { color: var(--primary-color); font-weight: bold; text-decoration: none; }
+.register-link a:hover { text-decoration: underline; }
+
+/* CHATBOX & OTHERS */
+.chat-popup { position: fixed; bottom: 20px; right: 20px; width: 350px; background: white; border-radius: 10px; box-shadow: 0 5px 25px rgba(0,0,0,0.2); display: none; flex-direction: column; overflow: hidden; z-index: 1000; }
+.chat-header { background: var(--primary-color); color: white; padding: 15px; display: flex; justify-content: space-between; font-weight: bold; }
+.chat-body { height: 300px; background: #f9f9f9; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; }
+.message { padding: 10px 15px; margin: 8px 0; border-radius: 15px; max-width: 80%; font-size: 14px; line-height: 1.4; }
+.bot { background: #e9ecef; color: #333; align-self: flex-start; border-bottom-left-radius: 2px; }
+.user { background: var(--primary-color); color: white; align-self: flex-end; border-bottom-right-radius: 2px; }
+.chat-input { display: flex; border-top: 1px solid #eee; padding: 10px; }
+.chat-input input { flex: 1; border: 1px solid #ddd; border-radius: 20px; padding: 10px 15px; outline: none; }
+.chat-input button { background: var(--primary-color); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; margin-left: 10px; cursor: pointer; transition: 0.2s; }
+.chat-input button:hover { background: var(--hover-color); }
+.back-btn { background: #f0f0f0; color: var(--text-color); border: none; padding: 10px 15px; border-radius: 20px; font-size: 14px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+.back-btn:hover { background: #e0e0e0; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+/* -- CÁC CSS CŨ BẠN GIỮ NGUYÊN, CHỈ COPY THÊM ĐOẠN DƯỚI ĐÂY -- */
+
+/* KHUNG THÔNG BÁO OTP (Giả lập tin nhắn) */
+.otp-toast {
+    display: none; /* Ẩn mặc định */
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    border-left: 5px solid #d97706;
+    padding: 20px;
+    z-index: 3000;
+    width: 300px;
+    text-align: center;
+    animation: slideDown 0.4s ease-out;
 }
 
-.service i{
-font-size:28px;
-background:#eee;
-padding:20px;
-border-radius:50%;
-margin-bottom:10px;
+@keyframes slideDown {
+    from { top: -100px; opacity: 0; }
+    to { top: 20px; opacity: 1; }
 }
 
-/* FAQ */
-
-.faq{
-padding:40px;
-}
-
-.faq-list{
-display:flex;
-gap:100px;
-}
-
-/* CHAT */
-
-.chat-popup{
-position:fixed;
-bottom:20px;
-right:20px;
-width:320px;
-background:white;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.2);
-display:none;
-flex-direction:column;
-overflow:hidden;
-}
-
-.chat-header{
-background:#9bbf9f;
-color:white;
-padding:12px;
-display:flex;
-justify-content:space-between;
-}
-
-.chat-body{
-height:250px;
-background:#f4f4f4;
-padding:10px;
-overflow-y:auto;
-}
-
-.message{
-padding:8px 12px;
-margin:8px 0;
-border-radius:15px;
-max-width:80%;
-}
-
-.bot{
-background:#e3f7ea;
-}
-
-.user{
-background:#9bbf9f;
-color:white;
-margin-left:auto;
-}
-
-.chat-input{
-display:flex;
-border-top:1px solid #ddd;
-}
-
-.chat-input input{
-flex:1;
-border:none;
-padding:10px;
-}
-
-.chat-input button{
-background:#9bbf9f;
-color:white;
-border:none;
-padding:10px 15px;
-cursor:pointer;
-}
-.back-btn{
-background:#fff;
-border:none;
-font-size:16px;
-cursor:pointer;
-margin-right:15px;
-}
-
-.back-btn i{
-margin-right:5px;
-}

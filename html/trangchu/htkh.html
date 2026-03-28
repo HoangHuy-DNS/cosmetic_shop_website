@@ -1,136 +1,230 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <title>MPO Support</title>
-
     <link rel="stylesheet" href="../css/htkh.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
-
 <body>
 
     <header>
-
-        <button class="back-btn" onclick="history.back()">
-<i class="fa fa-arrow-left"></i> Home
-</button>
-
+        <button class="back-btn" onclick="window.location.href='../html/index.html'">
+            <i class="fa fa-arrow-left"></i> Home
+        </button>
         <div class="logo">MPO.VN</div>
-
-        <div class="menu">
-            <a href="#">Gửi yêu cầu</a>
-            <a href="#">Đăng nhập</a>
+        <div class="menu" id="userMenu">
+            <a href="#" onclick="showLoginModal()">Đăng nhập</a>
         </div>
-
     </header>
 
-
     <section class="hero">
-
         <h1>Xin chào! Chúng tôi có thể giúp gì cho bạn?</h1>
-
         <div class="search-box">
-            <input type="text" placeholder="Nhập từ khóa để tìm sản phẩm...">
-            <button><i class="fa fa-search"></i></button>
+            <input type="text" id="searchInput" placeholder="Nhập từ khóa để tìm sản phẩm hoặc câu hỏi...">
+            <button onclick="performSearch()"><i class="fa fa-search"></i></button>
         </div>
-
         <div class="contact">
-
-            <span>
-<i class="fa fa-phone"></i> 1800 6324
-</span>
-
-            <span onclick="openChat()">
-<i class="fa fa-comment"></i> Chat
-</span>
-
+            <a href="tel:18006324" style="color: white; text-decoration: none; margin:0 15px;">
+                <span><i class="fa fa-phone"></i> 1800 6324</span>
+            </a>
+            <span onclick="openChat()" style="cursor: pointer; margin:0 15px;">
+                <i class="fa fa-comment"></i> Chat
+            </span>
         </div>
-
     </section>
 
-
     <section class="services">
-
-        <div class="service">
+        <div class="service" onclick="showAccountInfo()">
             <i class="fa fa-user"></i>
             <p>Tài khoản</p>
         </div>
-
-        <div class="service">
-            <i class="fa fa-bag-shopping"></i>
-            <p>Đặt hàng</p>
-        </div>
-
-        <div class="service">
+        <div class="service" onclick="showPackaging()">
             <i class="fa fa-box"></i>
-            <p>Quy cách đóng gói</p>
+            <p>Quy chuẩn đóng gói</p>
         </div>
-
-        <div class="service">
-            <i class="fa fa-truck"></i>
-            <p>Vận chuyển 2H</p>
-        </div>
-
-        <div class="service">
-            <i class="fa fa-money-bill"></i>
-            <p>Phí vận chuyển</p>
-        </div>
-
-        <div class="service">
+        <div class="service" onclick="showWarranty()">
             <i class="fa fa-shield"></i>
-            <p>Bảo hành</p>
+            <p>Bảo hành chính hãng</p>
         </div>
-
-        <div class="service">
+        <div class="service highlight-service" onclick="showReturnConfirm()">
             <i class="fa fa-rotate"></i>
-            <p>Đổi trả</p>
+            <p>Yêu cầu Đổi/Trả</p>
         </div>
-
-        <div class="service">
-            <i class="fa fa-spa"></i>
-            <p>Dịch vụ SPA</p>
-        </div>
-
     </section>
-
 
     <section class="faq">
-
-
-
-        <div class="faq-list">
-
-
-
-        </div>
-
+        <div class="faq-list"></div>
     </section>
 
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('infoModal')">&times;</span>
+            <h2 id="modalTitle">Tiêu đề</h2>
+            <div id="modalBody" class="modal-body-content">Nội dung...</div>
+        </div>
+    </div>
 
-    <!-- CHAT BOX -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content confirm-content" style="max-width: 450px;">
+            <div class="confirm-icon" style="font-size: 45px; margin-bottom: 5px;"><i class="fa fa-box-open"></i></div>
+            <h2 style="color: #d97706; margin-bottom: 15px;">Yêu cầu Đổi/Trả hàng</h2>
+            
+            <div style="text-align: left; background: #fffaf0; padding: 15px; border-radius: 8px; border: 1px solid #fde68a; margin-bottom: 20px; font-size: 14px; color: #555;">
+                <p style="margin-top: 0; font-weight: bold; color: #b45309; margin-bottom: 8px;"><i class="fa fa-circle-exclamation"></i> Điều kiện tiếp nhận yêu cầu:</p>
+                <ul style="padding-left: 20px; margin-bottom: 0; line-height: 1.6;">
+                    <li>Yêu cầu được tạo trong vòng <strong>07 ngày</strong> kể từ khi nhận.</li>
+                    <li>Sản phẩm chưa qua sử dụng, tem niêm phong còn nguyên vẹn.</li>
+                    <li>Có video quay lại quá trình mở kiện hàng (Unbox video).</li>
+                </ul>
+            </div>
+            
+            <p style="font-weight: bold; color: #333; margin-bottom: 20px;">Bạn đã sẵn sàng gửi yêu cầu Đổi trả cho đơn hàng gần nhất?</p>
+            <div class="confirm-actions">
+                <button class="btn-cancel" onclick="closeModal('confirmModal')">Quay lại</button>
+                <button class="btn-agree" onclick="processReturn()">Xác nhận Đổi/Trả</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content login-content">
+            <span class="close-modal" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Đăng nhập MPO</h2>
+            <form onsubmit="handleLogin(event)" class="login-form">
+                <div class="input-group">
+                    <label for="username">Email hoặc Số điện thoại</label>
+                    <input type="text" id="username" placeholder="Nhập email hoặc SĐT..." required oninput="hideError('loginError')">
+                    <span id="loginError" class="error-text">Email hoặc số điện thoại không tồn tại</span>
+                </div>
+                <div class="input-group">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" placeholder="Nhập mật khẩu..." required>
+                </div>
+                <div class="login-options">
+                    <label><input type="checkbox"> Nhớ mật khẩu</label>
+                    <a href="#" class="forgot-pw" onclick="showForgotPassword()">Quên mật khẩu?</a>
+                </div>
+                <button type="submit" class="btn-login">Đăng nhập</button>
+                <div class="register-link">
+                    Chưa có tài khoản? <a href="#" onclick="showRegisterModal()">Đăng ký ngay</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content login-content">
+            <span class="close-modal" onclick="closeModal('registerModal')">&times;</span>
+            <h2>Đăng ký Tài khoản</h2>
+            <form onsubmit="handleRegister(event)" class="login-form">
+                <div class="input-group">
+                    <label for="regName">Họ và tên</label>
+                    <input type="text" id="regName" placeholder="Nhập họ tên của bạn..." required>
+                </div>
+                <div class="input-group">
+                    <label for="regUser">Email hoặc Số điện thoại</label>
+                    <input type="text" id="regUser" placeholder="Nhập email hoặc SĐT..." required oninput="hideError('regUserError')">
+                    <span id="regUserError" class="error-text">Email hoặc số điện thoại không hợp lệ</span>
+                </div>
+                <div class="input-group">
+                    <label for="regPass">Mật khẩu</label>
+                    <input type="password" id="regPass" placeholder="Tạo mật khẩu..." required oninput="hideError('regPassError')">
+                </div>
+                <div class="input-group">
+                    <label for="regPassConfirm">Xác nhận mật khẩu</label>
+                    <input type="password" id="regPassConfirm" placeholder="Nhập lại mật khẩu..." required oninput="hideError('regPassError')">
+                    <span id="regPassError" class="error-text">Mật khẩu không khớp!</span>
+                </div>
+                <button type="submit" class="btn-login" style="margin-top:10px;">Hoàn tất đăng ký</button>
+                <div class="register-link">
+                    Đã có tài khoản? <a href="#" onclick="showLoginModal()">Đăng nhập ngay</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="forgotPwModal" class="modal">
+        <div class="modal-content login-content">
+            <span class="close-modal" onclick="closeModal('forgotPwModal')">&times;</span>
+            
+            <div id="fpStep1">
+                <h2>Quên mật khẩu</h2>
+                <p style="color:#555; font-size:14px; margin-bottom:20px;">Vui lòng nhập Email hoặc Số điện thoại để nhận mã khôi phục.</p>
+                <form onsubmit="handleSendCode(event)" class="login-form">
+                    <div class="input-group">
+                        <label for="fpInput">Email hoặc Số điện thoại</label>
+                        <input type="text" id="fpInput" placeholder="Nhập email hoặc SĐT..." required oninput="hideError('fpError')">
+                        <span id="fpError" class="error-text">Email hoặc số điện thoại không hợp lệ</span>
+                    </div>
+                    <button type="submit" class="btn-login" style="margin-top:10px;">Gửi mã khôi phục</button>
+                    <div class="register-link">
+                        <a href="#" onclick="backToLogin()"><i class="fa fa-arrow-left"></i> Quay lại đăng nhập</a>
+                    </div>
+                </form>
+            </div>
+
+            <div id="fpStep2" style="display: none;">
+                <h2>Nhập mã xác nhận</h2>
+                <p style="color:#555; font-size:14px; margin-bottom:20px;">Mã xác nhận gồm 6 chữ số đã được gửi đến bạn.</p>
+                <form onsubmit="handleVerifyCode(event)" class="login-form">
+                    <div class="input-group">
+                        <label for="otpInput">Mã xác nhận (OTP)</label>
+                        <input type="text" id="otpInput" placeholder="Nhập 6 số..." maxlength="6" required oninput="hideError('otpError')">
+                        <span id="otpError" class="error-text">Mã xác nhận không chính xác!</span>
+                    </div>
+                    <button type="submit" class="btn-login" style="margin-top:10px;">Xác nhận</button>
+                    <div class="register-link">
+                        <a href="#" onclick="backToStep1()">Thay đổi thông tin nhận mã</a>
+                    </div>
+                </form>
+            </div>
+
+            <div id="fpStep3" style="display: none;">
+                <h2>Tạo mật khẩu mới</h2>
+                <p style="color:#555; font-size:14px; margin-bottom:20px;">Mã xác nhận hợp lệ. Vui lòng thiết lập mật khẩu mới.</p>
+                <form onsubmit="handleResetPassword(event)" class="login-form">
+                    <div class="input-group">
+                        <label for="newPass">Mật khẩu mới</label>
+                        <input type="password" id="newPass" placeholder="Nhập mật khẩu mới..." required oninput="hideError('resetPassError')">
+                    </div>
+                    <div class="input-group">
+                        <label for="confirmNewPass">Xác nhận mật khẩu mới</label>
+                        <input type="password" id="confirmNewPass" placeholder="Nhập lại mật khẩu mới..." required oninput="hideError('resetPassError')">
+                        <span id="resetPassError" class="error-text">Mật khẩu không khớp!</span>
+                    </div>
+                    <button type="submit" class="btn-login" style="margin-top:10px;">Lưu mật khẩu</button>
+                    <div class="register-link" style="margin-top: 15px;">
+                        <a href="#" onclick="backToLogin()"><i class="fa fa-arrow-left"></i> Quay lại đăng nhập</a>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="otpNotification" class="otp-toast">
+        <div class="otp-toast-content">
+            <i class="fa fa-envelope-open-text" style="font-size: 24px; color: #d97706; margin-bottom:10px;"></i>
+            <h4 style="margin:0 0 5px 0; color:#333;">Tin nhắn hệ thống</h4>
+            <p style="margin:0; font-size: 14px; color:#444;">Mã khôi phục MPO của bạn là: <strong id="generatedOtp" style="color:var(--primary-color); font-size:18px; letter-spacing: 2px;"></strong></p>
+            <p style="margin:5px 0 15px 0; font-size: 12px; color:#dc3545; font-style:italic;">* Tuyệt đối không tiết lộ mã này cho bất kỳ ai.</p>
+            <button class="btn-agree" style="padding: 8px 20px; font-size: 14px;" onclick="closeOtpNotification()">Xong</button>
+        </div>
+    </div>
 
     <div class="chat-popup" id="chatBox">
-
         <div class="chat-header">
-            <span>Hỗ trợ khách hàng</span>
-            <button onclick="closeChat()">✖</button>
+            <span><i class="fa fa-headset"></i> Trung tâm CSKH MPO</span>
+            <button onclick="closeChat()" style="background: none; border: none; color: white; cursor: pointer; font-size: 16px;">✖</button>
         </div>
-
         <div class="chat-body" id="chatBody"></div>
-
         <div class="chat-input">
-            <input type="text" id="userInput" placeholder="Nhập tin nhắn...">
-            <button onclick="sendMessage()">Gửi</button>
+            <input type="text" id="userInput" placeholder="Nhập tin nhắn hỗ trợ..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()"><i class="fa fa-paper-plane"></i></button>
         </div>
-
     </div>
 
     <script src="../js/htkh.js"></script>
-
 </body>
-
 </html>
