@@ -1,257 +1,327 @@
 body {
-  font-family: Arial;
-  margin: 0;
-  background: #f4f4f4;
+    font-family: Arial;
+    margin: 0;
+    background: #f4f4f4;
 }
 
 header {
-  background: linear-gradient(0deg, rgb(248, 174, 186), white);
-  color: black;
-  padding: 10px;
+    background: linear-gradient(0deg, rgb(248, 174, 186), white);
+    color: black;
+    padding: 10px;
 }
 
 .baohanh a {
-  color: black;
+    color: black;
 }
+
 .mp {
-  text-align: center;
-  margin-top: 5px;
-  font-size: 38px;
-  text-shadow: 10px 0px 3px rgb(120, 118, 118);
-  color: black;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 38px;
+    text-shadow: 10px 0px 3px rgb(120, 118, 118);
+    color: black;
 }
+
 .mn {
-  display: flex;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 }
+
 .mn h3 {
-  background: linear-gradient(60deg, orange, rgb(236, 209, 159));
-  border: solid 0px;
-  padding: 5px;
-  border-radius: 10px;
+    background: linear-gradient(60deg, orange, rgb(236, 209, 159));
+    border: solid 0px;
+    padding: 5px;
+    border-radius: 10px;
 }
+
 header ul a {
-  color: black;
-  text-decoration: none;
-  margin: 10px;
-  font-size: 20px;
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 20px;
 }
+
 header ul a:hover {
-  color: brown;
+    color: brown;
 }
+
 .top-info {
-  display: flex;
-  justify-content: flex-end;
-  gap: 30px;
-  cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    cursor: pointer;
 }
+
 .top-info a:hover {
-  color: brown;
+    color: brown;
 }
 
 .info-item {
-  display: flex;
-  align-items: center;
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
 }
+
 .info-item a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .icon {
-  width: 35px;
-  height: 35px;
-  border: 2px solid white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 8px;
+    width: 35px;
+    height: 35px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
 }
 
 .search-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background: linear-gradient(0deg, rgb(144, 232, 232), pink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: linear-gradient(0deg, rgb(144, 232, 232), pink);
 }
 
 .search-bar input {
-  height: 40px;
-  width: 250px;
-  margin-left: auto;
-  padding: 0 10px;
-  box-sizing: border-box;
+    height: 40px;
+    width: 250px;
+    margin-left: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .search-bar button {
-  height: 40px;
-  padding: 0 15px;
-  background: red;
-  color: white;
-  border: none;
-  margin-left: 5px;
-  cursor: pointer;
-  transition: 0.2s;
+    height: 40px;
+    padding: 0 15px;
+    background: red;
+    color: white;
+    border: none;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.2s;
 }
+
 .search-bar button:hover {
-  background: darkred;
-  transform: scale(1.05);
+    background: darkred;
+    transform: scale(1.05);
 }
+
 .products {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 220px);
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 .product {
-  background: white;
-  width: 220px;
-  padding: 15px;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .product img {
-  width: 100%;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
 }
 
-.price {
-  color: red;
-  font-weight: bold;
+.product .product-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product .price {
+    margin-top: auto;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
 .btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 12px;
-  background: blue;
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
 }
 
 .menu-title {
-  font-weight: bold;
-  padding: 8px 15px;
-  font-size: 20px;
-  cursor: pointer;
+    font-weight: bold;
+    padding: 8px 15px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
-.menu-title:hover + .dropdown,
+.menu-title:hover+.dropdown,
 .dropdown:hover {
-  display: block;
-  cursor: pointer;
+    display: block;
+    cursor: pointer;
 }
+
 .dropdown ul {
-  list-style: none;
-  padding: 10px;
-  margin: 0;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
 }
 
 .dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 250px;
-  background: rgb(104, 103, 103);
-  border-radius: 14px;
-  border-radius: 10px;
-  z-index: 1000;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    background: rgb(104, 103, 103);
+    border-radius: 14px;
+    border-radius: 10px;
+    z-index: 1000;
 }
 
 .dropdown li a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .dropdown li:hover {
-  background: #78a826;
+    background: #78a826;
 }
 
 .title {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .bold {
-  font-weight: bold;
+    font-weight: bold;
 }
+
 .menu2 {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .cart-btn {
-  border: 2px solid white;
-  padding: 8px 15px;
-  border-radius: 20px;
-  text-decoration: none;
-  color: black;
+    border: 2px solid white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
 }
 
 .cart-btn:hover {
-  color: rgb(218, 221, 84);
+    color: rgb(218, 221, 84);
 }
-.brand-description {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  width: 80%;
-  margin: 20px auto;
-  padding: 20px;
 
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #f9f9f9;
+.brand-description {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
 }
 
 .brand-img {
-  width: 250px;
-  border-radius: 8px;
+    width: 250px;
+    border-radius: 8px;
 }
+
 .brand-text h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
 .brand-text p {
-  font-size: 16px;
-  color: #444;
-  line-height: 1.6;
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
 }
+
 .product-title {
-  text-align: center;
-  font-size: 28px;
-  margin: 30px 0 20px;
+    text-align: center;
+    font-size: 28px;
+    margin: 30px 0 20px;
 }
 
 .product-section {
-  width: 85%;
-  margin: 30px auto;
-  padding: 20px;
-
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #fff;
-
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 85%;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-.products {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
+
 .product button {
-  border-color: white;
-  padding: 3px;
-  cursor: pointer;
-  border-radius: 10px;
+    border-color: white;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 10px;
 }
+
 .product button:hover {
-  background-color: #51ab21;
+    background-color: #51ab21;
+}
+
+.f {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #77a18d;
+}
+
+.f input {
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+button {
+    cursor: pointer;
+    background: rgb(44, 192, 44);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.dk {
+    background: orange;
+}
+
+span {
+    color: orange;
+}
+
+.cart-btn,
+.home-btn {
+    border: solid 1px rgb(78, 77, 77);
+    padding: 3px;
+    border-radius: 7px;
+}
+
+.cart-btn:hover,
+.home-btn:hover {
+    background: orange;
+    color: white;
 }
