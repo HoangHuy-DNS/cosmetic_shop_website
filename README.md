@@ -2,7 +2,7 @@
 
 ## 📌 Giới thiệu
 
-Đây là dự án xây dựng **website bán mỹ phẩm trực tuyến** được thực hiện bởi **nhóm 5**.
+Đây là dự án xây dựng **website bán mỹ phẩm trực tuyến** được thực hiện bởi **nhóm 9**.
 Website nhằm mục đích giới thiệu sản phẩm, hiển thị thông tin và mô phỏng giao diện mua sắm cơ bản.
 
 ---
